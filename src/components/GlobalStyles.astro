@@ -1,0 +1,41 @@
+<style is:inline>
+	:root {
+        --colorBg: #FCFCFC;
+        --colorText: #1E1D1C;
+        --sectionSpace: 120px;
+    }
+
+	body {
+		background-color: var(--colorBg);
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        color: var(--colorText);
+	}
+
+        /* SCROLL REVEAL */
+    .reveal {
+        opacity: 0;
+    }
+
+    .reveal-up {
+        transform: translateY(25%);
+    }
+
+    .reveal-right {
+        transform: translateX(-25%);
+    }
+
+    .reveal-left {
+        transform: translateX(25%);
+    }
+
+    .reveal-down {
+        transform: translateY(-25%);
+    }
+
+    .visible {
+        transition: all 750ms ease;
+        opacity: 1;
+        transform: unset;
+    }
+</style>

@@ -1,0 +1,65 @@
+---
+import profilePicture from '../images/profilepic.jpg';
+import Building from './icons/building.astro';
+
+const { title } = Astro.props;
+---
+<section>
+    <div>
+        <h1>{title}</h1>
+        <p>
+            <img src={profilePicture.src} alt="atletl">
+            <slot/>
+        </p>
+        <i><Building/></i>
+    </div>
+</section>
+
+<style>
+    section {
+        color: var(--colorBg);
+        padding: var(--sectionSpace) 0;
+        position: relative;
+    }
+    section > div {
+        margin: 0 var(--sectionSpace);
+    }
+    section::before {
+        content: "";
+        position: absolute;
+        height: 700px;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--colorText);
+        z-index: -1;
+    }
+
+    h1 { 
+        margin: 0 0 60px 0; 
+        font-size: 2.5em;
+    }
+
+    p {
+        text-align: justify;
+        display: inline-block;
+        margin: 0;
+        font-size: 1.5em;
+    }
+
+    img {
+        float: right;
+        transform: translateX(var(--sectionSpace));
+        width: 42%;
+    }
+
+    i {
+        color: rgba(167,167,167, 50%);
+        position: absolute;
+        left: 0;
+        bottom: -35%;
+        width: 57%;
+    }
+    
+</style>
+

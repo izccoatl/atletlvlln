@@ -1,0 +1,95 @@
+---
+import FacebookLink from "./icons/facebook.astro";
+import InstagramLink from "./icons/instagram.astro";
+
+const { facebook, instagram } = Astro.props;
+---
+<header>
+    <h2>AV</h2>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <div class="social">
+                <ul>
+                    <li><FacebookLink to={facebook} /></li>
+                    <li><InstagramLink to={instagram} /></li>
+                </ul>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    header {
+        padding-top: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    h2 {
+        display: inline-block;
+        margin: 0;
+        font-size: 2.75em;
+        font-family: initial;
+    }
+
+    nav {
+        display: inline-block;
+        float: right;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        color: var(--colorText);
+    }
+
+    ul li {
+        display: inline-block;
+        margin: 0 1em;
+    }
+
+    ul li:first-child {
+        margin-left: 0;
+    }
+    ul li:last-child {
+        margin-right: 0;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    ul li a:hover {
+        text-decoration: underline;
+    }
+
+    .social {
+        position: absolute;
+        bottom: 0;
+        left: var(--sectionSpace);
+    }
+
+    .social ul {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .social ul li {
+        margin: 0;
+    }
+
+    .social > ul::after {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 190px;
+        background-color: var(--colorText);
+    }
+</style>

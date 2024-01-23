@@ -1,0 +1,47 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import HeroSection from "../components/HeroSection.astro";
+import About from "../components/AboutSection.astro";
+import Experience from "../components/ExperienceSection.astro";
+import ContactSection from "../components/ContactSection.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<MainLayout title="Atletl Villanueva | Architect"
+	description=`Atletl Villanueva is an Architect based on Mexico City,
+	passionate for innovation and design, specilizes in crafting architectural marvels 
+	that seamlessly blend aesthetics with functionality.`>
+
+	<HeroSection
+		name="Atletl Villanueva"
+		job="Architecture Student"
+		social_facebook="https://www.facebook.com/"
+		social_instagram="https://www.instagram.com/"
+	/>
+
+	<main>
+		<About title="ABOUT ME">
+			Soy un apasionado de la arquitectura, y disfruto sumergiéndome
+			en el arte de crear espacios. Mi enfoque minucioso y mi compromiso 
+			con la calidad me han permitidoexplorar el diseño de manera única. 
+			Aunque no busco destacar, es innegable que mis diseños buscan un equilibrio 
+			entre belleza y funcionalidad. Mi objetivo es combinar la estética con la practicidad 
+			de una manera que me llena de satisfacción. Aunque aún tengo mucho por aprender, 
+			estoy seguro de que mi dedicación a la innovación y la excelencia me guiará hacia un futuro
+			brillante en el mundo de la arquitectura. Después de todo, la grandeza se construye paso a 
+			paso, ¿no es así?
+		</About>
+		<Experience title="MY EXPERIENCE">
+			Soy un apasionado de la arquitectura, y disfruto sumergiéndome
+			en el arte de crear espacios. Mi enfoque minucioso y mi compromiso 
+			con la calidad me han permitido explorar el diseño de manera única. 
+			Aunque no busco destacar, es innegable que mis diseños buscan un equilibrio 
+			entre belleza y funcionalidad.
+		</Experience>
+	</main>
+
+	<ContactSection title="CONTACT ME" />
+
+	<Footer />
+</MainLayout>

@@ -1,0 +1,47 @@
+---
+import Header from "./Header.astro";
+import Building from "./icons/building.astro";
+
+const { name, job, social_facebook, social_instagram } = Astro.props
+const formattedName = name.toUpperCase().split(" ");
+---
+<section>
+    <Header 
+        facebook={social_facebook}
+        instagram={social_instagram}
+    />
+    <h1>{formattedName[0]}<br>{formattedName[1]}<br></h1>
+    <h2>{job}</h2>
+    <i><Building/></i>
+</section>
+
+<style>
+    section {
+        height: 100vh;
+        margin: 0 var(--sectionSpace);
+    }
+
+    h1 {
+        font-size: 120px;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 36px;
+        font-weight: 300;
+        margin-top: 0;
+        letter-spacing: 7.5px;
+    }
+    i {
+        color: rgba(167,167,167,30%);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 62%;
+    }
+    .social {
+        position: absolute;
+        bottom: 0;
+    }
+</style>
